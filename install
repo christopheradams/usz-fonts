@@ -1,0 +1,50 @@
+#!/bin/sh
+
+vendor=adobe
+font=sistina
+code=usz
+
+# Rename the original files according to the Karl Berry Scheme
+cp resources/s096013d.afm uszr8a.afm
+cp resources/s096013d.pfb uszr8a.pfb
+
+# Find our local TeX directory
+dir="$(kpsewhich -expand-var='$TEXMFLOCAL')"
+
+# new directory layout (TDS v1.1)
+map_dir="$dir/fonts/map/dvips/$font"
+afm_dir="$dir/fonts/afm/$vendor/$font"
+pfb_dir="$dir/fonts/type1/$vendor/$font"
+tfm_dir="$dir/fonts/tfm/$vendor/$font"
+vf_dir="$dir/fonts/vf/$vendor/$font"
+tex_dir="$dir/tex/latex/$font"
+
+sudo mkdir -p "$map_dir" "$afm_dir" "$pfb_dir" "$tfm_dir" "$vf_dir" "$tex_dir"
+
+# Create metrics and virtual fonts
+tex "$code-drv.tex"
+
+# Compile metrics and virtual fonts
+for f in *.pl; do pltotf $f;done
+for f in *.vpl; do vptovf $f;done
+
+# Create the map file
+tex "$code-map.tex"
+
+# Install fonts and support files
+sudo mv *.afm "$afm_dir" 
+sudo mv *.pfb "$pfb_dir"
+sudo mv *.tfm "$tfm_dir"
+sudo mv *.vf "$vf_dir"
+sudo mv *.fd "$tex_dir"
+sudo mv *.map "$map_dir"
+
+# Update the hash tables
+sudo texhash
+sudo updmap-sys --enable Map "$code.map" --force
+
+# Remove the intermediate files
+rm *.pl *.vpl *.log uszr*.mtx *-rec.tex usz*.dvi
+
+#
+# end of script

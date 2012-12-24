@@ -1,0 +1,27 @@
+\input fontinst.sty
+\needsfontinstversion{1.926}
+\recordtransforms{usz-rec.tex}
+% This is file usz-drv.tex.,
+% an instruction file for fontinst
+% to use the URW Sistina Normal D font.
+
+\transformfont{uszr8r}{\reencodefont{8r}{\fromafm{uszr8a}}}
+
+\installfonts
+	\installfamily{T1}{usz}{}
+		\installfont{uszr8t}{uszr8r,newlatin}
+			{t1}{T1}{usz}{m}{n}{}
+\endinstallfonts
+
+\installfonts
+	\installfamily{TS1}{usz}{}
+		\installfont{uszr8c}{uszr8r,textcomp}
+			{ts1}{TS1}{usz}{m}{n}{}
+		\installfont{uszra8c}{uszr8r,textcomp}
+			{ts1}{TS1}{usz}{m}{al}{}
+\endinstallfonts
+
+\endrecordtransforms
+\bye
+
+
