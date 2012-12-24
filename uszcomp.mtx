@@ -1,0 +1,162 @@
+\relax
+	This is uszcomp.mtx, to tune diacritics in URW Sistina Normal D font.
+\metrics
+\setcommand\topdiacritic#1#2#3#4{
+	\push
+		\moveup{#3}
+		\movert{\half{\sub{\width{#1}}{\width{#2}}}}
+		\movert{#4}
+		\glyph{#2}{1000}
+	\pop
+   \glyph{#1}{1000}
+}
+\setcommand\bottomdiacritic#1#2#3#4{
+   \push
+      \movert{\sub{\scale{\width{#1}}{#3}}{\scale{\width{#2}}{500}}}
+	  \moveup{#4}
+      \glyph{#2}{1000}
+   \pop
+   \glyph{#1}{1000}
+}
+
+\setglyph{Cacute}
+	\topdiacritic{C}{acute}{90}{50}
+\endsetglyph
+\setglyph{Lacute}
+	\topdiacritic{L}{acute}{90}{10}
+\endsetglyph
+\setglyph{Nacute}
+	\topdiacritic{N}{acute}{90}{50}
+\endsetglyph
+\setglyph{Racute}
+	\topdiacritic{R}{acute}{90}{-15}
+\endsetglyph
+\setglyph{Sacute}
+	\topdiacritic{S}{acute}{90}{10}
+\endsetglyph
+\setglyph{Zacute}
+	\topdiacritic{Z}{acute}{90}{30}
+\endsetglyph
+\setglyph{cacute}
+	\topdiacritic{c}{acute}{-115}{35}
+\endsetglyph
+\setglyph{lacute}
+	\topdiacritic{l}{acute}{-115}{-5}
+\endsetglyph
+\setglyph{nacute}
+	\topdiacritic{n}{acute}{-115}{35}
+\endsetglyph
+\setglyph{racute}
+	\topdiacritic{r}{acute}{-115}{-5}
+\endsetglyph
+\setglyph{sacute}
+	\topdiacritic{s}{acute}{-115}{-5}
+\endsetglyph
+\setglyph{zacute}
+	\topdiacritic{z}{acute}{-115}{35}
+\endsetglyph
+
+\setglyph{Abreve}
+	\topdiacritic{A}{breve}{100}{50}
+\endsetglyph
+\setglyph{abreve}
+	\topdiacritic{a}{breve}{-100}{35}
+\endsetglyph
+\setglyph{Gbreve}
+	\topdiacritic{G}{breve}{100}{35}
+\endsetglyph
+\setglyph{gbreve}
+	\topdiacritic{g}{breve}{-100}{30}
+\endsetglyph
+
+\setglyph{Ccaron}
+	\topdiacritic{C}{caron}{90}{50}
+\endsetglyph
+\setglyph{Dcaron}
+	\topdiacritic{D}{caron}{90}{0}
+\endsetglyph
+\setglyph{Ecaron}
+	\topdiacritic{E}{caron}{90}{0}
+\endsetglyph
+\setglyph{Ncaron}
+	\topdiacritic{N}{caron}{90}{0}
+\endsetglyph
+\setglyph{Rcaron}
+	\topdiacritic{R}{caron}{90}{-40}
+\endsetglyph
+\setglyph{Tcaron}
+	\topdiacritic{T}{caron}{90}{-5}
+\endsetglyph
+\setglyph{ccaron}
+	\topdiacritic{c}{caron}{-115}{35}
+\endsetglyph
+\setglyph{dcaron}
+	\topdiacritic{d}{caron}{-115}{-5}
+\endsetglyph
+\setglyph{ecaron}
+	\topdiacritic{e}{caron}{-115}{0}
+\endsetglyph
+\setglyph{lcaron}
+	\topdiacritic{l}{quoteright}{-200}{150}
+\endsetglyph
+\setglyph{ncaron}
+	\topdiacritic{n}{caron}{-115}{5}
+\endsetglyph
+\setglyph{rcaron}
+	\topdiacritic{r}{caron}{-115}{-35}
+\endsetglyph
+\setglyph{tcaron}
+	\topdiacritic{t}{caron}{-115}{-5}
+\endsetglyph
+
+\setglyph{Aogonek}
+	\bottomdiacritic{A}{ogonek}{870}{15}
+\endsetglyph
+\setglyph{aogonek}
+	\bottomdiacritic{a}{ogonek}{835}{15}
+\endsetglyph
+\setglyph{Eogonek}
+	\bottomdiacritic{E}{ogonek}{765}{15}
+\endsetglyph
+\setglyph{eogonek}
+	\bottomdiacritic{e}{ogonek}{725}{15}
+\endsetglyph
+
+\setglyph{Scedilla}
+	\bottomdiacritic{S}{cedilla}{350}{-15}
+\endsetglyph
+\setglyph{scedilla}
+	\bottomdiacritic{s}{cedilla}{330}{-10}
+\endsetglyph
+
+\setglyph{Ohungarumlaut}
+	\topdiacritic{O}{hungarumlaut}{90}{0}
+\endsetglyph
+\setglyph{Uhungarumlaut}
+	\topdiacritic{U}{hungarumlaut}{90}{0}
+\endsetglyph
+\setglyph{ohungarumlaut}
+	\topdiacritic{o}{hungarumlaut}{-115}{0}
+\endsetglyph
+\setglyph{uhungarumlaut}
+	\topdiacritic{u}{hungarumlaut}{-115}{0}
+\endsetglyph
+
+\setglyph{Uring}
+	\topdiacritic{U}{ring}{90}{0}
+\endsetglyph
+\setglyph{uring}
+	\topdiacritic{u}{ring}{-115}{0}
+\endsetglyph
+
+\setglyph{Zdotaccent}
+	\topdiacritic{Z}{dotaccent}{90}{0}
+\endsetglyph
+\setglyph{Idotaccent}
+	\topdiacritic{I}{dotaccent}{90}{0}
+\endsetglyph
+\setglyph{zdotaccent}
+	\topdiacritic{z}{dotaccent}{-115}{0}
+\endsetglyph
+
+\endmetrics
