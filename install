@@ -37,6 +37,7 @@ sudo mv *.pfb "$pfb_dir"
 sudo mv *.tfm "$tfm_dir"
 sudo mv *.vf "$vf_dir"
 sudo mv *.fd "$tex_dir"
+sudo cp *.sty "$tex_dir"
 sudo mv *.map "$map_dir"
 
 # Update the hash tables
@@ -44,7 +45,7 @@ sudo texhash
 sudo updmap-sys --enable Map "$code.map" --force
 
 # Remove the intermediate files
-rm *.pl *.vpl *.log uszr*.mtx *-rec.tex usz*.dvi
+rm *.pl *.vpl *.log uszr*.mtx *-rec.tex
 
 #
 # end of script

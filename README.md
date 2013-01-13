@@ -35,7 +35,7 @@ Open a Terminal in the current directory. Make the `install` file executable usi
 
 Enter your password when prompted. All the necessary font files will be installed in your TeX tree.
 
-Run `pdflatex sistina.tex` to generate a type specimen. To typeset a document using URW Sistina, include the `sistina.sty` file in the same directory as your LaTeX file, then add the following line to your premable:
+Run `pdflatex sistina.tex` to generate a type specimen. To use URW Sistina in your own document, add the following line to your premable:
 
 	\usepackage{sistina}
 	
